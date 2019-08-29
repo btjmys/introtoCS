@@ -1,0 +1,89 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+ <HEAD>
+  <TITLE> New Document </TITLE>
+  <META NAME="Generator" CONTENT="EditPlus">
+  <META NAME="Author" CONTENT="">
+  <META NAME="Keywords" CONTENT="">
+  <META NAME="Description" CONTENT="">
+
+  <style type="text/CSS">
+  #container{
+	position:absolute;
+	top:10px;
+	left:80px;
+	width:120px;
+	height:300px;
+	overflow:hidden;
+	border:1px solid red;
+	}
+  </style>
+
+  <script type="text/javascript">
+	var interval;
+/*
+ *随机生成颜色
+ *先生成红、绿、蓝三个基本色，再拼成类似#FF12A2的16进制的颜色值
+ *如果随机生成的某个基本色的值是小于16的，则转成16进制的字符串时只有一位
+ *所以这样的情况要在前面加‘0’
+*/
+	function generateColor(){
+		var color = ["#"];		
+		for(var i=0; i<3; i++){
+			var randInt = Math.round(255 * Math.random());
+			var hexColor = (randInt < 16 ?  "0" : "") + randInt.toString(16);
+			color.push(hexColor);
+		}
+		return color.join("");
+	}
+
+	function generateSquare(){
+		var top = 300 * Math.random();
+		var left = 120 * Math.random();
+		var width = Math.round(100 * Math.random());
+		var bgColor = generateColor();
+		var borderStyle = Math.random() > 0.5 ? "solid" : "dotted";
+		var borderColor = generateColor();
+
+		var square = document.createElement("div");
+		square.style.position = "absolute";
+		square.style.top = top + 'px';
+		square.style.left = left + 'px';
+		square.style.width = width + 'px';
+		square.style.height = width + 'px';
+		square.style.backgroundColor = bgColor;
+		square.style.borderStyle = borderStyle;
+		square.style.borderColor = borderColor;
+		square.style.borderWidth = "1px";
+		return square;
+	}
+
+	function f() {
+		var container = document.getElementById("container"); 
+		container.appendChild(generateSquare());
+	}
+
+	function randSquare(){	
+		interval = setInterval(f, 100);
+	}
+
+	function control(){
+		var btnCtrl = document.getElementById("btnCtrl");
+		if(btnCtrl.value == "stop"){
+			clearInterval(interval);
+			btnCtrl.value = "goon";
+		}
+		else{
+			interval = setInterval(f, 100);
+			btnCtrl.value = "stop";
+		}
+	}
+  </script>
+ </HEAD>
+
+ <BODY onload = "randSquare();">
+  <div id="container" name="container">	
+  </div>
+  <input type="button" id="btnCtrl" value="stop" οnclick="control();"/>
+ </BODY>
+</HTML>

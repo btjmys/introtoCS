@@ -1,0 +1,99 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body onload="startTime()">
+        <h1>Current time(In Taipei):</h1>
+    <p>Please select a city, and we will show you the current time there(select between Taipei, London, New York and Paris.).</p>
+   <input type="text" id="form_name" placeholder="City:">
+  
+    <button onclick="getCity()">Submit</button>
+    </form>
+        <div id="clock"></div>
+        <div id="clockforLondon"></div>
+        <div id="clockforNewYork"></div>
+        <div id="clockforParis"></div>
+       
+        <script>
+                
+//    var d1 = new Date(); 
+//    document.getElementById('xara').innerHTML = d1 ;
+//    var start = Date.now();
+//    document.getElementById('yara').innerHTML = start ;
+//    var stop = Date.now();
+//    document.getElementById('bara').innerHTML = stop ;
+//    var period = stop - start;
+//    document.getElementById('aara').innerHTML = start ;
+//    var d11 = new Date(2007, 0, 1);
+//    var d12 = new Date(2007, 1, 1);
+// //    if(d11 < d12)     alert('d11 < d12');
+// //    else if (d11 == d12) alert('d11 = d12');
+// //    else alert('d11 > d12');
+//    var e1 =  new Date(timestamp + 8*60*60*1000).getUTCDay();
+function startTime(){
+  var today = new Date();
+  var hh = today.getHours();
+  var mm = today.getMinutes();
+  var ss = today.getSeconds();
+  mm = checkTime(mm);
+  ss = checkTime(ss);
+  document.getElementById('clock').innerHTML = hh + ":" + mm + ":" + ss;
+  var timeoutId = setTimeout(startTime, 500);
+}
+// document.getElementById('cara').innerHTML = e1;
+// function getCity(){
+//                 //  讀取radio的值
+//                  var form = document.getElementById("form_name");
+//                 //  for(var i=0; i<form.city.length;i++){
+//                 //     if(form.language[i].checked){
+//                 //         var language = form.language[i].value;
+//                 //         alert(language);
+//                 //     }
+//                 // }
+//                 //  讀取select的值
+//                 var city = form.city.value;
+//                 // alert(city);
+//                 //if(city == 'Taipei') {
+//                     // document.getElementById('xara').innerText = 'Taiwan';
+//                 }
+function startTime(){
+  var today = new Date();
+  var hh = today.getHours();
+  var mm = today.getMinutes();
+  var ss = today.getSeconds();
+  var hhforLondon = hh - 7;
+  var hhforNewYork = hh - 12;
+  var hhforParis = hh - 6;
+  var thecity = document.getElementById('form_name').value;
+  mm = checkTime(mm);
+  ss = checkTime(ss);
+  
+//   alert(city);
+  if(thecity == 'Taipei') document.getElementById('clock').innerHTML = 'Current time in Taipei is' + ' ' + hh + ":" + mm + ":" + ss;
+  else if (thecity == 'London') document.getElementById('clockforLondon').innerHTML = 'Current time in London is' + ' ' + hhforLondon + ":" + mm + ":" + ss;
+  else if (thecity == 'New York') document.getElementById('clockforNewYork').innerHTML = 'Current time in New York is' + ' ' +  hhforNewYork + ":" + mm + ":" + ss;
+  else if (thecity =='Paris') document.getElementById('clockforParis').innerHTML = 'Current time in Paris is' + ' ' + hhforParis + ":" + mm + ":" + ss;
+  var timeoutId = setTimeout(startTime, 500);
+}
+
+function checkTime(i){
+  if(i < 10) {
+    i = "0" + i;
+  }
+  return i;
+}
+// function createItem() {
+//      localStorage.setItem("mytime", Date.now());
+//                     }
+// function readValue() {
+//     var x = localStorage.getItem("mytime");
+//     document.getElementById("aara").innerHTML = x;
+// } 
+</script>
+ <h4 id="xara"></h4>
+</body>
+</html>

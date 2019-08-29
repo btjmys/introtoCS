@@ -1,0 +1,38 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="thearticle">
+    <input type="submit" id="handin">
+    
+
+    <h4 id="tara"></h4>
+    <h4 id="xara"></h4>
+    <h4 id="para"></h4>
+    <button onclick="
+    var len = document.getElementById('thearticle').value;
+    var newlen = len.split(' ');
+
+    // var withoutSpace = len.replace(/ /g, '');
+    // alert(typeof withoutSpace);
+    document.getElementById('tara').innerText = 'Your article contains ' + ' ' + withoutSpace.length + ' ' + 'characters.';
+    ">check</button>
+   
+   <button onclick="
+    var r = 0;
+    var s = 'ovuvuevuevue';
+    for (var i = 0; i < s.length; i++)
+     {console.log(s[i]);
+    
+        if(s[i] == 'e') 
+        {r++;
+        document.getElementById('para').innerText = r; }
+       };
+    ">test</button>
+
+</body>
+</html>

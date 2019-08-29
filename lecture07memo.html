@@ -1,0 +1,28 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>An easy memo app</title>
+</head>
+<body>
+    <p>Add things in the column below:</p>
+    <input type="text" id="addadd" placeholder="add something">
+    <button onclick="mmemmo()">Submit</button>
+    <h4 id="aara"></h4>
+    <script>
+
+    function mmemmo() {
+ 
+        var orrigin = document.getElementById('addadd').value;
+        localStorage.setItem('note', orrigin);
+        document.getElementById('aara').innerHTML = '1.' + ' ' + localStorage.getItem('note');
+    }
+ 
+
+
+
+
+    </script>
+</body>
+</html>

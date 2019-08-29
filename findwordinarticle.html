@@ -1,0 +1,36 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    <p>Please input your article here:</p>
+    <input type="text" id="thearticle">
+    <button onclick="
+    var articley = document.getElementById('thearticle').value;
+    var ararticle = articley.split(' ');
+    document.getElementById('tara').innerText = articley;
+    // for(i = 0; i <= ararticle.length - 1; i++) {
+    //     ararticle[i].style.color = 'yellow';
+    // }
+    ">Submit</button>
+     <h4 id="tara"></h4>
+    <p>What word are you looking for?</p>
+    <input type="text" id="searchch">
+    <button onclick="
+     var v = document.getElementById('searchch').value; 
+     
+     var x = document.getElementById('thearticle').value;
+     var xx = x.split(' ');
+     var a = xx.indexOf(v);
+     var b = Number(a) + 1;
+     document.getElementById('xara').innerText = 'There are ' + a  + ' ' + 'words between the words ' + v  + ' ' +  '.';
+    // document.getElementById('yara').innerText = a;
+    ">Search</button>
+    <h4 id="xara"></h4>
+    <h4 id="yara"></h4>
+</body>
+</html>

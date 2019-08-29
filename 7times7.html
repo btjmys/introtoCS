@@ -1,0 +1,120 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        table{
+            border-collapse: collapse;
+        }
+
+        table,tr,td{
+            border: 1px solid white
+            /* border: 1px solid #fff; */
+        }
+
+        table td {
+            width: 20px;
+            height: 20px;
+            overflow: hidden;
+            display: inline-block;
+            white-space: nowrap;
+            text-align: center;
+
+        }
+    
+    </style>
+</head>
+<body>
+        
+    <input type="text" id="tara">
+    <button onclick="switchfunction()">Submit</button>
+        <script> 
+     document.write('<table>');
+            for (i = 1; i <= 7; i++) {
+            document.write('<tr>');
+                    for (j = 1; j <= 7; j++) {
+                        var id = 'position'　+　i　+　j;
+                        
+                        
+                        document.write('<td  class="tdClass"  id="position' + i + j +'">' + '</td>')
+            }
+            document.write('</tr>');
+        }
+        //    document.getElementById('position11').innerHTML = 'o';
+        // var cena = ["12", "13", "14", "15", "16", "26", "36", "46", "45", "44", "43", "42", "52", "62", "72", "73", "74", "75", "76"]
+        
+       
+        var cena = [ ];
+        function switchfunction() {
+        for(i = 1; i < 8; i++) {
+            for (j = 1; j <= 7; j++) {
+                var john = i.toString() + j.toString();
+                // if(cena.indexOf(john) >= 0){
+                    document.getElementById('position' + john).innerHTML = '';
+
+                // }
+               
+            }
+        }
+      
+        var araryfor1 = ["14", "24", "34", "44", "54", "64", "74"];
+        var Number = document.getElementById('tara').value;
+        var john = i.toString() + j.toString();
+        console.log(typeof Number);
+        switch(Number) {
+            case '0':  
+            cena = ["12", "22", "32", "42", "52", "62", "72", "73", "74", "75", "76", "66", "56", "46", "36", "26", "16", "15", "14", "13"];
+            //  document.getElementById('position' + cena ).innerHTML = 'o';
+             break;
+             case '1':  
+             cena =  ["14", "24", "34", "44", "54", "64", "74"];
+             break;
+            // document.getElementById('position' +cena ).innerHTML = 'o';
+            case '2': 
+            cena = ["12", "13", "14", "15", "16", "26", "36", "46", "45", "44", "43", "42", "52", "62", "72", "73", "74", "75", "76"];
+            break;
+            // document.getElementById('position' +cena ).innerHTML = 'o';
+            case '3': 
+            cena =  ["12", "13", "14", "15", "16", "26", "36", "46", "56", "66", "76", "75", "74", "73", "72", "42", "43", "44", "45"];
+            break;
+            case '4': 
+            cena =  ["12", "22", "32", "42", "43", "44", "45", "16", "26", "36", "46", "56", "66", "76"];
+            break;
+            case '5': 
+            cena = ["12", "13", "14", "15", "16", "22", "32", "42", "43", "44", "45", "46", "56", "66", "76", "75", "74", "73", "72"];
+            break;
+            case '6': 
+            cena =  ["12", "13", "14", "15", "16", "22", "32", "42", "43", "44", "45", "46", "56", "66", "76", "75", "74", "73", "72", "52", "62"];
+            break;
+            case '7': 
+            cena =  ["12", "22", "32", "13", "14", "15", "16", "26", "36", "46", "56", "66", "76"];
+
+            break;
+            case '8': 
+            cena =  ["12", "22", "32", "13", "14", "15", "16", "26", "36", "46", "56", "66", "76", "42", "43", "44", "45", "52", "62", "72", "73", "74", "75"];
+            break;
+            case '9': 
+            cena = ["12", "22", "32", "42", "43", "44", "45", "13", "14", "15", "16", "26", "46", "36", "56", "66", "76", "75", "74", "73", "72"];
+            break;
+        }
+        console.log(cena);
+        for(i = 1; i < 8; i++) {
+            for (j = 1; j <= 7; j++) {
+                var john = i.toString() + j.toString();
+                if(cena.indexOf(john) >= 0){
+                    document.getElementById('position' + john).innerHTML = 'o';
+
+                }
+               
+            }
+        }
+    }
+
+
+        </script>
+        
+        <h4 id="tara"></h4>
+</body>
+</html>

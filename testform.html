@@ -1,0 +1,72 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="formstyle.css">
+</head>
+<body>
+
+    <h1 style="color:crimson">Please give us some of your imformations</h1>
+    <form action="testtestform.html" method="POST">
+        <table>
+                <tr>
+                        <td style="color: blue">Please input your name:</td>
+                        <td><input type="text" id="namename" autocomplete="off"/>Your name</td>  
+                    </tr>
+                    
+                <tr>
+                        <td style="color: blue">Please input your age:</td>
+                        <td><input type="text" id="ageage"  maxlength="5"/>Your age</td>  
+                    </tr>
+                
+                        <td style="color: blue">Please input your phone number:</td>
+                        <td><input type="text" id="phonenumber" placeholder="Your phone number"   required  /></td>  
+                    </tr>
+                    <tr>
+                            <td style="color: blue">Please input your email address:</td>
+                            <td><input type="text" id="emailaddress" autocomplete="on" />Your email address</td>  
+                        </tr>
+                        <tr>
+                                <td style="color: blue">Please input your blood type:</td>
+                                <td><input type="text" id="bloodtype" size="50px"  />Your blood type</td>    
+                            </tr>
+                            <tr>
+                                    <td style="color: blue">Please input your password:</td>
+                                    <td><input type="password" id="passpass" /></td>    
+                                </tr>
+        </table>
+        <!-- <br><button type="submit" style="color: darkblue">Submit</button> -->
+        <input type="radio" value="雞" name="menu">雞
+        <input type="radio" value="豬" name="menu">豬
+        <input type="radio" value="牛" name="menu">雞
+        <input type="checkbox" value="雞" name="menu">雞
+        <input type="checkbox" value="豬" name="menu">豬
+        <input type="checkbox" value="牛" name="menu">牛
+        <input type="reset">
+        <input type="color">
+        <input type="email">
+        <input type="date">
+        <input type="file">
+        <input type="number" min="20" max="100">
+        <input type="range">
+        <h4 id="myName"></h4>
+        <input type="submit" value="確認">
+        <img src="5.jpg"  height="200px">
+        <select multiple name="menu3">
+            <option>雞</option>
+            <option>豬</option>
+            <option>牛</option>
+        </select>
+        <textarea rows="10" cols="11">asdfasedgd</textarea>
+    </form>
+    
+            <button style="color: darkblue" onclick="
+                var nameOfUser = document.getElementById('namename').value;
+                // console.log('your name is' + nameOfUser);
+                document.getElementById('myName').innerText='So your name is ' + nameOfUser;
+                ">Submit</button>
+                
+</body>
+</html>

@@ -1,0 +1,62 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    a:focus, a:active {
+        color: crimson;
+    }
+    </style>
+</head>
+<body>
+    <h4 id="aara"></h4>
+    <h4 id="bara"></h4>
+    <h4 id="cara"></h4>
+    <h4 id="dara"></h4>
+    <h4 id="eara"></h4>
+    <h4 id="fara"></h4>
+    <h4 id="gara"></h4>
+    <input type="text" id="lname" placeholder="your name">
+    <button onclick="lostrg()">Submit</button>
+    <br> <a id="wind" href="www.google.com">RnVjayB5b3U=</a>
+    
+    <button onclick="window.close()">close</button>
+    <button onclick="rock()">Change color</button>
+    <button onclick="antirock()">Change color back</button>
+  <script>
+    var x = 14000000 + 605;
+    // confirm('The keyboard is a son of a bitch')
+    var txt = '';
+    var yorn = confirm('Eat poops?');
+    if(yorn == true) txt = 'Fuck yeah!';
+    else txt = 'Oh hell no!';
+    document.getElementById('gara').innerHTML = txt;
+    document.getElementById('aara').innerHTML = this.x;
+    // var window.y = 'why'; 
+    document.getElementById('bara').innerHTML = window.innerHeight;
+    document.getElementById('cara').innerHTML = window.innerWidth;    
+    function lostrg() {
+    var cena = document.getElementById('lname').value;
+    localStorage.setItem('lastname', cena);
+    document.getElementById('dara').innerHTML = localStorage.getItem('lastname');
+}
+document.getElementById('dara').innerHTML = localStorage.getItem('lastname');
+
+    var wha = 'Fuck you';
+    var ahw = window.btoa(wha);
+    document.getElementById('eara').innerHTML = ahw;
+    var fsedsgr = 'RnVjayB5b3U=';
+    var fdr = atob( fsedsgr);
+    document.getElementById('fara').innerHTML = fdr;
+    function rock() {
+        document.getElementById('wind').focus();
+    }
+    function antirock() {
+        document.getElementById('wind').blur();
+    }
+
+ </script>
+</body>
+</html>

@@ -1,0 +1,104 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        <h1 style="color: crimson">*Be sure to close each button right after it has been clicked once.</h1>
+        <h4 id="uara"></h4>
+        <input type="button" onclick="tictactoe('button1')" id="button1" value="  ">
+        <input type="button" onclick="tictactoe('button2')" id="button2" value="  ">
+        <input type="button" onclick="tictactoe('button3')" id="button3" value="  ">
+<br>
+        <input type="button" onclick="tictactoe('button4')" id="button4" value="  ">
+        <input type="button" onclick="tictactoe('button5')" id="button5" value="  ">
+        <input type="button" onclick="tictactoe('button6')" id="button6" value="  ">
+<br>
+         <input type="button" onclick="tictactoe('button7')" id="button7" value="  ">
+         <input type="button" onclick="tictactoe('button8')" id="button8" value="  ">
+         <input type="button" onclick="tictactoe('button9')" id="button9" value="  ">
+         <h4 id="tara"></h4>
+         <!-- <button  onclick="document.getElementById('button1').disabled = true;">closebutton1</button>
+         <button  onclick="document.getElementById('button2').disabled = true;">closebutton2</button>
+         <button  onclick="document.getElementById('button3').disabled = true;">closebutton3</button>
+         <br><button  onclick="document.getElementById('button4').disabled = true;">closebutton4</button>
+         <button  onclick="document.getElementById('button5').disabled = true;">closebutton5</button>
+         <button  onclick="document.getElementById('button6').disabled = true;">closebutton6</button>
+         <br><button  onclick="document.getElementById('button7').disabled = true;">closebutton7</button>
+         <button  onclick="document.getElementById('button8').disabled = true;">closebutton8</button>
+         <button  onclick="document.getElementById('button9').disabled = true;">closebutton9</button>
+         -->
+        <!-- <br><br><br><br><br><br><input type="button" onclick = "checkwin()" -->
+         
+         <!-- value="checkwinner" > -->
+      
+<script>
+        var  count = 0;
+   function tictactoe(ID) {
+       var elem = document.getElementById(ID);
+       count++;
+       if(count%2==1) elem.value="O";
+       else elem.value="X";
+       console.log(count);
+       if(elem.value != " ") document.getElementById(ID).disabled = true;
+       checkwin();
+
+   }
+   function checkwin() {
+        var a = document.getElementById('button1').value;
+         var b = document.getElementById('button2').value;
+         var c = document.getElementById('button3').value;
+         var d = document.getElementById('button4').value;
+         var e = document.getElementById('button5').value;
+         var f = document.getElementById('button6').value;
+         var g = document.getElementById('button7').value;
+         var h = document.getElementById('button8').value;
+         var i = document.getElementById('button9').value;
+         if((a == b) && (b == c) &&(c == 'O')) { document.getElementById('tara').innerText='O wins!';   
+         document.getElementById('button1').value = " ";        
+         document.getElementById('button2').value = " "; 
+         document.getElementById('button3').value = " "; 
+         document.getElementById('button4').value = " "; 
+         document.getElementById('button5').value = " "; 
+         document.getElementById('button6').value = " "; 
+         document.getElementById('button7').value = " "; 
+         document.getElementById('button8').value = " "; 
+         document.getElementById('button9').value = " ";  
+         document.getElementById('button1').disabled = false ;
+         document.getElementById('button2').disabled = false ;
+         document.getElementById('button3').disabled = false ;
+         document.getElementById('button4').disabled = false ;
+         document.getElementById('button5').disabled = false ;
+         document.getElementById('button6').disabled = false ;
+         document.getElementById('button7').disabled = false ;
+         document.getElementById('button8').disabled = false ;
+         document.getElementById('button9').disabled = false ;
+        //  document.getElementById('button1').disabled = false ;        
+        }
+         if((d == e) && (e == f) &&(f == 'O')) document.getElementById('tara').innerText='O wins!';
+         if((g == h) && (h == i) &&(i == 'O')) document.getElementById('tara').innerText='O wins!'; 
+         if((a == d) && (d == g) &&(g == 'O')) document.getElementById('tara').innerText='O wins!';
+         if((b == e) && (e == h) &&(h == 'O')) document.getElementById('tara').innerText='O wins!';
+         if((c == f) && (f == i) &&(i == 'O')) document.getElementById('tara').innerText='O wins!';
+         if((g == h) && (g == i) &&(i == 'O')) document.getElementById('tara').innerText='O wins!';
+         if((a == e) && (e == i) &&(i == 'O')) document.getElementById('tara').innerText='O wins!';
+         if((c == e) && (e == g) &&(g == 'O')) document.getElementById('tara').innerText='O wins!';
+         if((a == b) && (b == c) &&(c == 'X')) document.getElementById('tara').innerText='X wins!';
+         if((d == e) && (e == f) &&(f == 'X')) document.getElementById('tara').innerText='X wins!';
+         if((g == h) && (h == i) &&(i == 'X')) document.getElementById('tara').innerText='X wins!'; 
+         if((a == d) && (d == g) &&(g == 'X')) document.getElementById('tara').innerText='X wins!';
+         if((b == e) && (e == h) &&(h == 'X')) document.getElementById('tara').innerText='X wins!';
+         if((c == f) && (f == i) &&(i == 'X')) document.getElementById('tara').innerText='X wins!';
+         if((g == h) && (g == i) &&(i == 'X')) document.getElementById('tara').innerText='X wins!';
+         if((a == e) && (e == i) &&(i == 'X')) document.getElementById('tara').innerText='X wins!';
+         if((c == e) && (e == g) &&(g == 'X')) document.getElementById('tara').innerText='X wins!';        
+        
+        }
+//    function newgame() {
+        //    if checkwin()
+//    }
+   </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h4 id="tara"></h4>
+    <h4 id="xara"></h4>
+    <p>Rock, paper or scissors?</p>
+    <input onkeyup="value="/value.replace(/[\W]/g,"’’)" id="rps" placeholder="Answer in this form: Rock, Paper or Scissors."> 
+    <button onclick="getrandomnumber()">Submit</button>
+    <script>
+        function getrandomnumber() {
+            var minNumber = 1;//The minimum number you want
+            var maxNumber = 2;//The maximum number you want
+            var randomnumber = Math.floor(Math.random() * (maxNumber + 1) + minNumber);
+            document.getElementById('tara').innerHTML = randomnumber;
+            if(randomnumber == 1) { document.getElementById('tara').innerHTML = 'The move of computer is' + ' ' + 'Rock';}
+            else if (randomnumber == 2) { document.getElementById('tara').innerHTML = 'The move of computer is' + ' ' + 'Paper';}
+            else { document.getElementById('tara').innerHTML = 'The move of computer is' + ' ' + 'Scissors';}
+            var x = document.getElementById('rps').value;
+            document.getElementById('xara').innerHTML = 'The move of user is' + ' ' + x;
+            if((x == 'Rock') && (randomnumber == 1)) document.write('You tied!')
+            else if ((x == 'Paper') && (randomnumber == 2)) document.write('You tied!')
+            else if ((x == 'Scissors') && (randomnumber == 3)) document.write('You tied!')
+            else if ((x == 'Rock') && (randomnumber == 3)) document.write('You won!')
+            else if ((x == 'Paper') && (randomnumber == 1)) document.write('You won!')
+            else if ((x == 'Scissors') && (randomnumber == 2)) document.write('You won!')
+            else if ((x == 'Scissors') && (randomnumber == 1)) document.write('You lost!')
+            else if ((x == 'Rock') && (randomnumber == 2)) document.write('You lost!')
+            else if ((x == 'Paper') && (randomnumber == 3)) document.write('You lost!')
+            
+  
+  
+  
+   }
+            </script>
+</body>
+</html>

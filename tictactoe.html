@@ -1,0 +1,39 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <button oncanplay="" -->
+        <input type="button" onclick="tictactoe('button1')" id="button1" value="  ">
+        <input type="button" onclick="tictactoe('button2')" id="button2" value="  ">
+        <input type="button" onclick="tictactoe('button3')" id="button3" value="  ">
+
+        <br>
+        
+        <input type="button" onclick="tictactoe('button4')" id="button4" value="  ">
+        <input type="button" onclick="tictactoe('button5')" id="button5" value="  ">
+        <input type="button" onclick="tictactoe('button6')" id="button6" value="  ">
+
+        <br>
+        
+        <input type="button" onclick="tictactoe('button7')" id="button7" value="  ">
+        <input type="button" onclick="tictactoe('button8')" id="button8" value="  ">
+        <input type="button" onclick="tictactoe('button9')" id="button9" value="  ">
+<script>
+     var  count = 0;
+function tictactoe(ID) {
+    var elem = document.getElementById(ID);
+   
+    count++;
+    if(count%2==1) elem.value="O";
+    else elem.value="X";
+    
+    console.log(count);
+}
+
+</script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+   
+    <p>What are you planning to do?</p>
+    <input type="text" id="memomemo" placeholder="Thing to do:">
+    <button onclick="createsomething()">Submit</button>
+    <script>
+
+    function createsomething() {
+        var node = document.createElement('li');
+        var orderorder = document.getElementById('memomemo').value;
+        node.innerHTML = orderorder;
+        document.getElementById('memo').appendChild(node); 
+        var buttun = document.createElement('button');  
+        buttun.innerHTML = 'Delete';
+        buttun.onclick =  function eventfunction(event) {
+            event.target.previousSibling.remove();
+            event.target.remove();
+        };
+        document.getElementById('memo').appendChild(buttun);     
+    }
+  
+    </script>
+    <ol id="memo">
+            
+        </ol>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Simple calculator</title>
+    <script type="text/javascript">
+function plus() {
+    var number1 = getfirstNumber();
+    var number2 = getsecondNumber();
+    var re = Number(number1) + Number(number2);
+    sendResult(re);
+
+}
+function minus() {
+    var number1 = getfirstNumber();
+    // 幹 我這邊看不懂....
+    var number2 = getsecondNumber();
+    var re = Number(number1) - Number(number2);
+    sendResult(re);
+}
+
+
+function time() {
+    var number1 = getfirstNumber();
+    var number2 = getsecondNumber();
+    var re = Number(number1) * Number(number2);
+    sendResult(re);
+}
+function devide() {
+    var number1 = getfirstNumber();
+    var number2 = getsecondNumber();
+    var re = number1 / number2;
+    sendResult(re);
+}
+
+function sendResult(result_1) {
+    var num = document.getElementById("result")
+    num.innerHTML = result_1;
+    }
+function getfirstNumber() {
+    var firstNumber = document.getElementById("first").value;
+    return firstNumber;
+    }
+function getsecondNumber() {
+    var secondNumber = document.getElementById("second").value;
+    return secondNumber;
+    }
+    </script>
+    <link rel="stylesheet" href="functionstyle.css">
+    <!-- document -->
+</head>
+<body>
+    
+    <!-- var result_1; -->
+    <h1 style="color: purple">+-Simple calculator*/</h1>
+    <p style="color:blue">This is a simple calculator and it will show you the result of the equation you input.</p>
+    <!-- <p style="color: blue">#Please input in this form: 1 + 1# </p> -->
+    <table border="1" style="position: center;">
+    <tr>
+        <td style="color: blue">Please input your first number:</td>
+        <td><input type="text" id="first" /></td>  
+    </tr>
+    <tr>
+        <td style="color: blue">Please input your second number:</td>
+        <td><input type="text" id="second" /></td>  
+    </tr>
+    <tr>
+    <br><td colspan="2" id="blablabla">&nbsp;
+        <button style="width: inherit" onclick="plus()">+</button> &nbsp;
+        <button style="width: inherit" onclick="minus()">-</button>
+        &nbsp;
+        <button style="width: inherit" onclick="time()">*</button>
+        <button style="width: inherit" onclick="devide()">/</button>
+    </td>
+    </tr>
+    <tr>
+       <td colspan="2" rowspan="2">
+       <p id="result"></p>
+       </td> 
+    </tr>
+</table>
+    <!-- <br><br><input onkeydown="if(event.keyCode==13)event.keyCode=9" >  -->
+    <br><br><img src="calculator.jpg">    
+    <!-- <p>Please select one function: 1.plus 2.minus 3.time 4.divide</p> --> 
+</body>
+</html>

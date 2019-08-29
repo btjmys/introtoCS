@@ -1,0 +1,79 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <p>Please input 4 numbers to construct a 2*2 matrix: </p>
+    <input type="text" id="matrixx" placeholder="Key in four numbers here">
+    <button id="handin" onclick="
+    var mat = document.getElementById('matrixx').value;
+    matt = mat.split(' ');
+    document.getElementById('sara').innerText = mat;
+    document.getElementById('tara').innerText = 'The matrix is: ';
+    document.getElementById('para').innerText = matt[0] + ' ' + matt[1];
+    document.getElementById('xara').innerText = matt[2] + ' ' + matt[3];
+
+    var det1 = Number(matt[0]) * Number(matt[3]);
+    var det2 = Number(matt[1]) * Number(matt[2]);
+    var thedet = Number(det1) - Number(det2);
+    document.getElementById('yara').innerText = 'The determinant of your matrix is ' + ' ' + thedet + '.';
+    // document.getElementById('xara').innerText = typeof matt;
+    ">Submit</button>
+    <h4 id="sara"></h4>
+    <h4 id="tara"></h4>
+    <h4 id="para"></h4>
+    <h4 id="xara"></h4>
+    <h4 id="uara"></h4>
+    <h4 id='yara'></h4>
+    <p>Please input four more numbers for another matrix: </p>
+    <input type="text" id="othermat" placeholder="4 more numbers here:">
+    <button onclick="
+    var x = document.getElementById('othermat').value;
+    z =  x.split(' ');
+    document.getElementById('aara').innerText = z;
+    ">Submit</button>
+      <h4 id='aara'></h4>
+     <button onclick=" 
+     var hi = document.getElementById('matrixx').value;
+     var hii = hi.split(' ');
+     var hey = document.getElementById('othermat').value;
+     var heyy = hey.split(' ');
+     var multi = [];
+     var multi01 = Number(hii[0]) * Number(heyy[0]);
+     var multi02 = Number(hii[1]) * Number(heyy[2]);
+     var multi1 = Number(multi01) + Number(multi02);
+     var multi001 = Number(hii[0]) * Number(heyy[1]);
+     var multi002 = Number(hii[1]) * Number(heyy[3]);
+     var multi2 = Number(multi001) + Number(multi002);
+     var multi0001 = Number(hii[2]) * Number(heyy[0]);
+     var multi0002 = Number(hii[3]) * Number(heyy[2]);
+     var multi3 = Number(multi0001) + Number(multi0002);
+     var multi00001 = Number(hii[2]) * Number(heyy[1]);
+     var multi00002 = Number(hii[3]) * Number(heyy[3]);
+     var multi4 = Number(multi00001) + Number(multi00002);
+     var detdet1 = Number(multi1) * Number(multi4);
+     var detdet2 = Number(multi2) * Number(multi3);
+     var thedetdet = Number(detdet1) - Number(detdet2);
+     
+     document.getElementById('thanos').innerText = 'The matrix from the multiplication is :';
+     document.getElementById('jason').innerText = multi1 + ' ' + multi2;
+     document.getElementById('lizard').innerText = multi3 + ' ' + multi4;
+     document.getElementById('john').innerText = 'The determinant of the multiplication from multiplication is' + ' ' + thedetdet + '.';
+
+     ">Multiplication</button>
+     <h4 id="thanos"></h4>
+     <h4 id="jason"></h4>
+     <h4 id="lizard"></h4>
+     <h4 id="john"></h4>
+    <script>
+
+    
+    
+    
+    
+    </script>
+</body>
+</html>

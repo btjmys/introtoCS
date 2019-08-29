@@ -1,0 +1,30 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    var yellowdog = {
+        name : '小黃',
+        color : '黑色', 
+        bark: function() {
+            console.log('woof');
+        
+        },
+        selfintroduction: function() {
+           
+          console.log('我的名字叫'  + this.name + ', 我的顏色是' + this.color)
+        }
+
+        
+    };
+
+    console.log(yellowdog.color);
+    yellowdog.bark();
+    yellowdog.selfintroduction()
+    </script>
+</body>
+</html>

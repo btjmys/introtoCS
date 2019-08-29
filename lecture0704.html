@@ -1,0 +1,44 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    .button.active{
+        background-color: blueviolet
+    }
+    </style>
+</head>
+<body>
+    <h4 id="aara" ></h4>
+    <h4 id="bara" ></h4>
+    <h1 id="cara"></h1>
+    <!-- <p>What do you want to eat?</p> -->
+    <!-- <input type="text" id="didinner" placeholder="What food do you want?"> -->
+    <button class="button" onclick="orderfood()">Order</button>
+    <button class="button" onclick="ozujfd()">location</button>
+    <button class="button" onclick="soiljac()">replace</button>
+    <button class="button" onclick="attributete()">attribute</button>
+   <script>
+    window.stop();
+    function orderfood() {
+    var food = 'Pasta';
+    var dinner = prompt('What would you like for dinner?', food)
+        if(food !== null) {document.getElementById('aara').innerHTML = 'So you want to have ' + ' ' + dinner + ' ' + 'for your dinner?' }
+    }
+    function ozujfd() {
+        var x = location.href;
+        document.getElementById('bara').innerHTML = x;
+     
+    }
+    function soiljac() {
+        location.replace('https://www.google.com');
+    }
+    function attributete() {
+        document.getElementsByTagName('h4')[0].setAttribute('class', 'fillin');
+    }
+    document.getElementsByClassName('button')[0].setAttribute('class', 'button active');
+     </script>
+</body>
+</html>

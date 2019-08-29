@@ -1,0 +1,24 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        <button onclick="moveit()
+        ">Start</button>
+   
+         <div style="position: absolute; border: 1px solid crimson; width: 575px; height: 530px; background-color: darkmagenta" >
+                 <div style="position: relative; color: blue;" id="thebutton"><input type="button" value="whereami"  style="position: relative"></div>
+             </div>
+    <script>
+    function moveit() {
+        for(i = 0; i <= 10000; i++){
+            var secondd = i / 1000;
+            var timeoutID = window.setTimeout(( () => document.getElementById('thebutton').style.left = 10 * secondd + 'px'), 1000  * secondd);
+        }
+    }
+    </script>
+</body>
+</html>

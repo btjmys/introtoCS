@@ -1,0 +1,58 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div class="card" id="card">
+        <div class="title">講</div>
+        <div class="content">幹</div>
+        <div class="price">話</div>
+    </div>
+    <div class="card" id="cardd">
+        <div class="title">的</div>
+        <div class="content">高</div>
+        <div class="price">手</div>
+    </div>
+    <div class="card" id="carddd"11>
+        <div class="title">李</div>
+        <div class="content">仁</div>
+        <div class="price">吉</div>
+    </div>                
+    <h1 id="aara">FUCK</h1>
+    <button onclick="changecolor()">change</button>
+    <button onclick="eventfunction(event)">SHIT1</button>
+    <button onclick="eventfunction(event)">SHIT2</button>
+    <button onclick="eventfunction(event)">SHIT3</button>
+    <button onclick="eventfunction(event)">SHIT4</button>
+    <button onclick="eventfunction(event)">SHIT5</button>
+  
+    <button onclick="eventfunction(event)">SHIT6</button>
+    <button onclick="removepriceandthings()">remove</button>
+    <script>
+        function changecolor() {
+            document.getElementById('aara').style.color = 'red';
+        }
+        function eventfunction(event) {
+            event.target.remove();
+        }
+        function removepriceandthings() {
+        carddd.removeChild(carddd.childNodes[1]);   
+        }
+        
+        var food = {
+            'fried_chicken':3,
+            'french_fries':3,
+            'hot_dog': 5,
+            'drink': 2,
+            'price': 1000
+        }
+        console.log(food.fried_chicken);
+        console.log(typeof food);
+        var foodstr = JSON.stringify(food);
+        console.log(typeof foodstr);
+    </script>
+</body>
+</html>

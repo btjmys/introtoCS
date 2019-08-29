@@ -1,0 +1,93 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        <h1>Imformations collection</h1>
+ 
+        <form method="GET">
+          <!-- 幹，action連不進去 -->
+      
+          <table>
+              <tr>
+                  <td>Please input your first name:</td>
+                  <td><input type="text" id="first" placeholder="Your first name" name="bmielement"  required   /></td>  
+              </tr>
+              <tr>
+                      <td>Please input your last name:</td>
+                      <td><input type="text" id="last" placeholder="Your last name"  name="bmielement" required /></td>  
+                  
+                  </tr>
+                  <tr>
+                  <td>Please input your height in meters:</td> 
+                  <td> <input onKeyPress="if (event.keyCode!=46 && event.keyCode!=45 && 
+                      　　 (event.keyCode<48 || event.keyCode>57)) event.returnValue=false" id="height" placeholder="Your height" required > </td>  
+  
+                  </tr>
+                  <tr>
+                          <td>Please input your weight in kilograms:</td> 
+                          <td> <input onKeyPress="if (event.keyCode!=46 && event.keyCode!=45 && 
+                              　　 (event.keyCode<48 || event.keyCode>57)) event.returnValue=false" id="weight" placeholder="Your weight"> </td>  
+          
+                          </tr>
+          </table>
+          <p >Your gender: </p>
+          <select multiple name="gender" name="usergender">
+                <option>Male</option>
+                <option>Female</option>
+                <option>Other</option>
+            </select>
+          <p>Your age:</p>
+          <input type="number">
+          <p>Your birth date:</p>
+          <input type="date">
+          <p>Your email address:</p>
+          <input type="email">
+          <p>Please input your phone number:</p>
+          <input onkeyup="value=value.replace(/[^\d]/g,'') " >
+          <p>What excercise do you like?</p>
+          <input type="checkbox" value="bskb" name="exercise">basketball
+          <input type="checkbox" value="basb" name="exercise">baseball
+          <input type="checkbox" value="ftbl" name="exercise">football
+          <input type="checkbox" value="wtlf" name="exercise">weightlifting
+          <input type="checkbox" value="swmg" name="exercise">swimming
+          <p>Which city do you live?</p>
+          <select multiple name="city">
+                  <option>臺北市</option>
+                  <option>新北市</option>
+                  <option>桃園市</option>
+                  <option>臺中市</option>
+                  <option>臺南市</option>
+                  <option>高雄市</option>
+                  <option>基隆市</option>
+                  <option>新竹市</option>
+                  <option>嘉義市</option>
+                  <option>新竹縣</option>
+                  <option>苗栗縣</option>
+                  <option>彰化縣</option>
+                  <option>南投縣</option>
+                  <option>雲林縣</option>
+                  <option>嘉義縣</option>
+                  <option>屏東縣</option>
+                  <option>宜蘭縣</option>
+                  <option>花蓮縣</option>
+                  <option>臺東縣</option>
+                  <option>澎湖縣</option>
+              </select>
+          <p>Please hand in your biography.</p>
+          <h4 id="abc"></h4>
+          <h4 id="efg"></h4>
+          <input type="file" required>
+          <p>Please input your grade for the last exam: </p>
+          <input type="number" min="0" max="100" step="0.1">
+          
+        
+      </form>
+   <button onclick="
+    var genderofuser = document.getElementsByName('usergender')[0].tagName;
+    document.getElementById('abc').innerText = 'You are ' + genderofuser ">Submit</button>
+</body>
+</html>

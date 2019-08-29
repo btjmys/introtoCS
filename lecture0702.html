@@ -1,0 +1,67 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>正規表達式</title>
+</head>
+<body> 
+    <h4 id="tara"></h4>
+    <h4 id="xara"></h4>
+    <h4 id="yara"></h4>
+    <h4 id="zara"></h4>
+    <h4 id="aara"></h4>
+    <h4 id="bara"></h4>
+    <h4 id="cara"></h4>
+    <h4 id="dara"></h4>
+    <h4 id="eara"></h4>
+    <h4 id="fara"></h4>
+    <h4 id="gara"></h4>
+    <h4 id="hara"></h4>
+    <h4 id="iara"></h4>
+    <h4 id="jara"></h4>
+    <h4 id="kara"></h4>
+    <h4 id="lara"></h4>
+    <h4 id="mara"></h4>
+    <h4 id="nara"></h4>
+    <!-- <button onclick="shupe()">hey</button> -->
+    <script>
+    var e04 = ['holy', 'freaking', 'shoot'];
+    document.getElementById('tara').innerHTML = e04;
+    e04[1] = 'fucking';
+    e04[2] = 'shit'; 
+    var dl4 = ['bitch', 'a', 'of', 'son'];
+    var ld4 = dl4.reverse();
+    document.getElementById('yara').innerHTML = ld4;
+    document.getElementById('xara').innerHTML = e04;
+    var lava = ['你', '唱', '歌', '好', '聽'];
+    document.getElementById('zara').innerHTML = lava;
+    lava.splice(4, 0, '難');
+    document.getElementById('aara').innerHTML =  lava;
+    var repeat = ['I', 'fucking', 'hate', 'this', 'fucking', 'situation'];
+    document.getElementById('bara').innerHTML = repeat;
+    var rapeat = repeat.indexOf('fucking');
+    document.getElementById('cara').innerHTML = rapeat;
+    var rbpeat = repeat.lastIndexOf('fucking');
+    document.getElementById('dara').innerHTML = rbpeat;
+    var vae = [0, 1.5708, 0.7854, 3.1415];
+    var vad = vae.map(Math.sin);
+    document.getElementById('eara').innerHTML = vad;    
+    var john = [14000000, 600, 5];
+    document.getElementById('fara').innerHTML = john.reduce(shupe);
+    // var cena = ['and']
+    document.getElementById('gara').innerHTML = 'Hulk is the strongest there is'.replace(/.ulk/gi, 'Cena');
+    // /
+    function shupe(total, num) {
+        return total + num;
+    }
+    document.getElementById('hara').innerHTML = /FUCK.$/i.test('Oops they love to fuck.');
+    document.getElementById('jara').innerHTML = /atta*/i.test('Chicken attaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaack');
+    document.getElementById('kara').innerHTML = /a{1, 5}/i.test('Chicken faaaaaaaaaaaaaaaaaaaaaaaaack');
+    document.getElementById('lara').innerHTML = /ck?/i.test('fukc');
+    document.getElementById('mara').innerHTML = /fuck|shit|ass/i.test('fuck shit ass');
+    document.getElementById('nara').innerHTML = /(son) (of) (a) (bitch) \1 \2/i.test('son of a bitch son of');
+    
+</script>
+  </body>
+</html>

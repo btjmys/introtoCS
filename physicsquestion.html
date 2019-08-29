@@ -1,0 +1,32 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"> 
+    <title>Document</title>
+</head>
+<body>
+
+    <p>How fast is light in m/s?</p>
+    <input onkeyup="value="/value.replace(/["^\d]/g,’’) id="answeranswer" placeholder="Input your answer here.">
+    <button onclick="answerit()">Submit</button>
+    <h4 id="tara"></h4>
+   <script>
+    function answerit() {
+
+    for(let i = 10; i >= 0; i--) {
+        var count = i;
+        document.getElementById('tara').innerHTML = count;
+     if(count == 0) alert('Out of chance. We are sorry that you did not get this problem.')
+    }
+
+
+
+
+
+
+    }
+    
+    </script>
+</body>
+</html>

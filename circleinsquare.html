@@ -1,0 +1,57 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        <style>
+                .circle {
+                  height: 250px;
+                  width: 250px;
+                  background-color: green;                  
+                  border-radius: 50%;
+                }
+                .square {
+                  height: 70px;
+                  width: 50px;
+                  background-color: green;
+                }
+                div{ float:left} 
+                
+</style>
+
+ <br><h1>This Program will show the area of the circle bounded in the square.</h1>
+ <p>The length of the square: </p>
+ <input onKeyPress="if (event.keyCode!=46 && event.keyCode!=45 && 
+　　 (event.keyCode<48 || event.keyCode>57)) event.returnValue=false" id="lengthlength"> 
+      
+ <button onclick="var x = document.getElementById('lengthlength').value;
+ document.getElementById('xara').innerHTML = 'The length of the square:' + x + 'm';">Submit</button>
+   <h4 id="xara"></h4>
+   <h4 id="tara"></h4>
+   <h4 id="aara"></h4>
+ <div style="position: absolute; border: 1px solid crimson; width: 250px; height: 250px; background-color: darkmagenta" >
+            <div class="circle"  style=" position: relative; left: 0px; color: green;" id="thehead"></div>
+    </div>
+<br><br<br><br><br><br><br><br>  <br><br><br<br><br><br><br><br><br>  <br><br><br<br><br><br><br><br><br><button onclick="getthearea()">Calculate the area</button>
+
+  <script>
+        function getthearea() {
+            var minNumber = 0;//The minimum number you want
+            var maxNumber = 100;//The maximum number you want
+            var randomnumber = Math.floor(Math.random() * (maxNumber + 1) + minNumber);
+            document.getElementById('tara').innerHTML = randomnumber;
+            var diameter = document.getElementById('lengthlength').value;
+            var radius = Number(diameter) / 2;
+            var areaarea = Number(radius) * Number(radius) * 3.1415;
+            document.getElementById('aara').innerHTML = 'Area of the circle is' + ' ' + areaarea + ' ' + 'square meters.';
+       
+
+	
+        }
+          </script>
+</body>
+
+</html>

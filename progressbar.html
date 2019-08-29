@@ -1,0 +1,30 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        <input type="range" id="xxposition" min="0" max="100" onchange="x_of_button()">Position on x axle
+       <br> <input type="range" id="yyposition" min="0" max="100"  onchange="y_of_button()">Position on y axle
+       <h4 id="difficult"></h4>
+        <script>
+        function x_of_button() {
+            
+            var positionx = document.getElementById('xxposition').value;
+            var positiony = document.getElementById('yyposition').value;
+            document.getElementById('thebutton').style.left = positionx;
+        }
+        function y_of_button() {
+            
+            var positionx = document.getElementById('xxposition').value;
+            var positiony = document.getElementById('yyposition').value;
+            document.getElementById('thebutton').style.top =  positiony;
+        }
+        </script>
+       
+     
+       <input type="button" value="whereami" id="thebutton" style="position: relative"> 
+</body>
+</html>

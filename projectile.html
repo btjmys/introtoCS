@@ -1,0 +1,94 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    
+    
+</head>
+<body>
+        <style>
+                .circle {
+                  height: 50px;
+                  width: 50px;
+                  background-color: green;                  
+                  border-radius: 50%;
+                }
+                .square {
+                  height: 70px;
+                  width: 50px;
+                  background-color: green;
+                }
+                div{ float:left} 
+                </style>
+    <p>Please input the angle for the projectile motion: </p>
+    <input onKeyPress="if (event.keyCode!=46 && event.keyCode!=45 && 
+                    　　 (event.keyCode<48 || event.keyCode>57)) event.returnValue=false" id="degree" placeholder="Angle(degree)"> 
+    <button onclick="
+    var slope = document.getElementById('degree').value;
+    document.getElementById('tara').innerText = 'angle: ' + ' ' + slope + '°';">Enter</button>
+      <h4 id="tara"></h4>
+    <p>Please input the initial speed for the projectile motion: </p>
+    <input onKeyPress="if (event.keyCode!=46 && event.keyCode!=45 && 
+                    　　 (event.keyCode<48 || event.keyCode>57)) event.returnValue=false" id="speed" placeholder="speed(meter/second)"> 
+                        <button onclick= "
+                        var howfast = document.getElementById('speed').value;
+                        document.getElementById('uara').innerText ='Initial speed:' + ' ' + howfast + 'm/s';
+                        ">Enter</button>
+                        <h4 id="uara"></h4>
+                <br><button onclick = moveit()>Start moving the image</button>
+                <h4 id="xara"></h4>
+                <h4 id="yara"></h4>
+  <div style="position: absolute; border: 1px solid crimson; width: 575px; height: 530px; background-color: darkmagenta" >
+        <div class="circle"  style=" position: relative; left: 175px; color: green;" id="movingball"></div>
+
+  </div>             
+  <script>
+  function moveit() {
+    var sloping = document.getElementById('degree').value;
+    var thesloping = Number(sloping) * 0.017453;
+    var speeding = document.getElementById('speed').value;
+    var parallel = Math.sin(thesloping);
+    var verticle = Math.cos(thesloping);
+    var speedx = Number(speeding) * Number(parallel);
+    var speedy = Number(speeding) * Number(verticle);
+    document.getElementById('xara').innerText = 'Speed along x axis:' + speedx + 'm/s';
+    document.getElementById('yara').innerText = 'Speed along y axis:' + speedy + 'm/s'; 
+    var timeoutID = window.setTimeout(( () => document.getElementById('movingball').style.bottom = '-480px'), 1000);
+    var timeoutID = window.setTimeout(( () => document.getElementById('movingball').style.left = '0px'), 1000);
+//    for(i=0; i <= 5; i++) {
+    setInterval(function(){ document.getElementById('movingball').style.left = speedx  + 'px'; } , 3000);
+    setInterval(function(){ document.getElementById('movingball').style.left = speedx * 2  + 'px'; } , 3500);
+    setInterval(function(){ document.getElementById('movingball').style.left = speedx * 3  + 'px'; } , 4000);
+    setInterval(function(){ document.getElementById('movingball').style.left = speedx * 4  + 'px'; } , 4500);
+    setInterval(function(){ document.getElementById('movingball').style.left = speedx * 5  + 'px'; } , 5000);
+    setInterval(function(){ document.getElementById('movingball').style.left = speedx * 6  + 'px'; } , 5500);
+    setInterval(function(){ document.getElementById('movingball').style.left = speedx * 7  + 'px'; } , 6000);
+    setInterval(function(){ document.getElementById('movingball').style.left = speedx * 8  + 'px'; } , 6500);
+    setInterval(function(){ document.getElementById('movingball').style.left = speedx * 9  + 'px'; } , 7000);
+    setInterval(function(){ document.getElementById('movingball').style.left = speedx * 10  + 'px'; } , 7500);
+   setInterval(function(){ document.getElementById('movingball').style.bottom = -speedy + 'px'; }, 3000);
+   setInterval(function(){ document.getElementById('movingball').style.bottom = -speedy * 2 + 'px'; }, 3500);
+   setInterval(function(){ document.getElementById('movingball').style.bottom = -speedy * 3 + 'px'; }, 4000);
+   setInterval(function(){ document.getElementById('movingball').style.bottom = -speedy * 4 + 'px'; }, 4500);
+   setInterval(function(){ document.getElementById('movingball').style.bottom = -speedy * 5 + 'px'; }, 5000);
+   setInterval(function(){ document.getElementById('movingball').style.bottom = -speedy * 6 + 'px'; }, 5500);
+   setInterval(function(){ document.getElementById('movingball').style.bottom = -speedy * 7 + 'px'; }, 6000);
+   setInterval(function(){ document.getElementById('movingball').style.bottom = -speedy * 8 + 'px'; }, 6500);
+   setInterval(function(){ document.getElementById('movingball').style.bottom = -speedy * 9 + 'px'; }, 7000);
+   setInterval(function(){ document.getElementById('movingball').style.bottom = -speedy * 10 + 'px'; }, 7500);
+    // setInterval({
+    // alert("hi"); }, 1000);
+    }
+    //  var timeoutID = window.setTimeout(( () => document.getElementById('movingball').style.left =  speeding + 'px'), 2000); 
+    // var timeoutID = window.setTimeout(( () => document.getElementById('movingball').style.left = '0px + '), 1000);
+    function myFunction() {
+    setInterval(function(){ alert("Hello"); }, 3000);
+}
+  </script>
+
+  <button onclick="myFunction() ">try</button>
+  
+</body>
+</html>

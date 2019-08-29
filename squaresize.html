@@ -1,0 +1,50 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        <style>
+                .circle {
+                  height: 50px;
+                  width: 50px;
+                  background-color: green;                  
+                  border-radius: 50%;
+                }
+                .square {
+                  height: 70px;
+                  width: 50px;
+                  background-color: green;
+                }
+                div{ float:left} 
+          
+</style>
+    <p>What size of the square do you want?</p>
+    <input type="range" id="squaresize" min="2" max="10" step="1" >The size of your square
+   <h4 id="para"></h4>
+   <button onclick="
+     var sizesize = document.getElementById('squaresize').value;
+   document.getElementById('para').innerText = sizesize;
+   var sizing = document.getElementById('squaresize').value;
+       if(sizing == 2) { document.getElementById('eeebb').style.height = '60px'; 
+                         document.getElementById('eeebb').style.width = '60px'; }  else if (sizing == 3) document.getElementById('eeebb').style.height = '90px'; else if (sizing == 4) document.getElementById('eeebb').style.height = '120px';  else if (sizing == 5) document.getElementById('eeebb').style.height = '150px';  else if (sizing == 6) document.getElementById('eeebb').style.height = '180px';  else if (sizing == 7) document.getElementById('eeebb').style.height = '210px';  else if (sizing == 8) document.getElementById('eeebb').style.height = '240px';  else if (sizing == 9) document.getElementById('eeebb').style.height = '270px'; else document.getElementById('eeebb').style.height = '300px';
+       ">Height</button>
+       <button onclick="
+     
+     var sizing = document.getElementById('squaresize').value;
+         if(sizing == 2) document.getElementById('eeebb').style.width = '60px' ; else if (sizing == 3) document.getElementById('eeebb').style.width = '90px'; else if (sizing == 4) document.getElementById('eeebb').style.width = '120px';  else if (sizing == 5) document.getElementById('eeebb').style.width = '150px';  else if (sizing == 6) document.getElementById('eeebb').style.width = '180px';  else if (sizing == 7) document.getElementById('eeebb').style.width = '210px';  else if (sizing == 8) document.getElementById('eeebb').style.width = '240px';  else if (sizing == 9) document.getElementById('eeebb').style.width = '270px'; else document.getElementById('eeebb').style.width = '300px';
+         ">Width</button>
+         
+    <br><br><br><div class="square" style=" position: relative; left: 100px; height: 180px; width: 180px;  color: green;" id="eeebb"></div>
+   <!-- <button onclick="var sizing = document.getElementById('range').value; -->
+   <!-- if(sizing = 2) document.getElementById('eeebb').style.height = '50px' ">sdfzv</button> -->
+   <script>
+      
+
+ 
+    
+    </script>
+</body>
+</html>

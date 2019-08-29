@@ -1,0 +1,135 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+            table {
+                border-collapse: collapse;
+    
+            }
+    
+            table,
+            tr,
+            td {
+                border: 1px solid black;
+            }
+        </style>
+</head>
+<body>
+    <script>
+          document.write('<table>');
+                document.write('<tr>');
+                        document.write('<td> ' +  'function/angle' +  '</td>');
+                        for (j = 1; j <= 18; j++) {
+                        var ii = j * 10;
+                        var iii = ii * 0.017453;
+                        document.write('<td>' + ii + '</td>')
+            }
+                        document.write('</tr>');
+                document.write('<tr>');
+            //     for (j = 1; j <= 18; j++) {
+            //     document.write('<td>' + 'sin' + '</td>')
+                document.write('<tr>')
+                document.write('<td>' + 'sin' + '</td>')
+                for (j = 1; j <= 18; j++) {
+                var ii = j * 10;
+                var iii = ii * 0.017453;
+                // document.write( '<td>' + ii + '</td>')
+                document.write('<td>' + Math.sin(iii) + '</td>')    
+            }
+                document.write('</tr>')
+               
+                document.write('<tr>')
+                document.write('<td>' + 'cos' + '</td>')
+                for (j = 1; j <= 18; j++) {
+                var ii = j * 10;
+                var iii = ii * 0.017453;
+                // document.write( '<td>' + ii + '</td>')
+                document.write('<td>' + Math.cos(iii) + '</td>')    
+            }
+
+                document.write('<tr>')
+                document.write('<td>' + 'tan' + '</td>')
+                for (j = 1; j <= 18; j++) {
+                var ii = j * 10;
+                var iii = ii * 0.017453;
+                // document.write( '<td>' + ii + '</td>')
+                document.write('<td>' + Math.tan(iii) + '</td>')    
+            }
+            //     for (j = 1; j <= 18; j++) {
+            //     var ii = j * 10;
+            //     var iii = ii * 0.017453;
+             
+            //     document.write( '<td>' + ii + '</td>')
+            // }
+            
+            document.write('</tr>');
+            document.write('<tr>')
+                document.write('<td>' + 'cot' + '</td>')
+                for (j = 1; j <= 18; j++) {
+                var ii = j * 10;
+                var iii = ii * 0.017453;
+                // document.write( '<td>' + ii + '</td>')
+                document.write('<td>' + 1 / Math.tan(iii) + '</td>')    
+            }
+            //     for (j = 1; j <= 18; j++) {
+            //     var ii = j * 10;
+            //     var iii = ii * 0.017453;
+             
+            //     document.write( '<td>' + ii + '</td>')
+            // }
+            
+            document.write('</tr>');
+           
+            document.write('<tr>')
+                document.write('<td>' + 'sec' + '</td>')
+                for (j = 1; j <= 18; j++) {
+                var ii = j * 10;
+                var iii = ii * 0.017453;
+                // document.write( '<td>' + ii + '</td>')
+                document.write('<td>' + 1 / Math.cos(iii) + '</td>')    
+            }
+            
+            //     for (j = 1; j <= 18; j++) {
+            //     var ii = j * 10;
+            //     var iii = ii * 0.017453;
+             
+            //     document.write( '<td>' + ii + '</td>')
+            // }
+            
+            document.write('</tr>');
+            document.write('<tr>')
+                document.write('<td>' + 'csc' + '</td>')
+                for (j = 1; j <= 18; j++) {
+                var ii = j * 10;
+                var iii = ii * 0.017453;
+                // document.write( '<td>' + ii + '</td>')
+                document.write('<td>' + 1 / Math.sin(iii) + '</td>')    
+            }
+            
+            //     for (j = 1; j <= 18; j++) {
+            //     var ii = j * 10;
+            //     var iii = ii * 0.017453;
+             
+            //     document.write( '<td>' + ii + '</td>')
+            // }
+            
+            document.write('</tr>');
+            document.write('<br>');
+            // for (j = 1; j <= 18; j++) {
+               
+            // }
+            // document.write('</tr>');
+            //     for (j = 1; j <= 18; j++) {
+            //     var ii = j * 10;
+            //     var iii = ii * 0.017453;
+            //     // document.write( '<td>' + ii + '</td>')
+            //     document.write('<td>' + Math.cos(iii * 10) + '</td>')    
+            // }
+             
+                document.write('</table>');
+    </script>
+</body>
+</html>

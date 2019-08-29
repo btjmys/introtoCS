@@ -1,0 +1,32 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>A useful memo</title>
+</head>
+<body>
+    <h1>Add things to your memo:</h1>
+    <input type="text" id="mmemmo" placeholder="Please add something here ">
+    <button onclick="memomemo()">Submit</button>
+   <h4 id="aara"></h4>
+   <h4 id="bara"></h4>
+   <h4 id="cara"></h4>
+   <h4 id="dara"></h4>
+   <h4 id="eara"></h4>
+   <h4 id="fara"></h4>
+   <h4 id="gara"></h4>
+   <h4 id="hara"></h4>
+   <h4 id="iara"></h4>
+   <h4 id="jara"></h4>
+   <script>
+    function memomemo() {
+        for(i = 1; i <= 10; i++) {
+        var cena = document.getElementById('mmemmo').value;
+            document.write(i + '.' + cena  +  '<br>');
+        }
+    }
+    </script>
+</body>
+
+</html>
