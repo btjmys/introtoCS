@@ -8,24 +8,37 @@
 <body>
 
     <p>How fast is light in m/s?</p>
-    <input onkeyup="value="/value.replace(/["^\d]/g,’’) id="answeranswer" placeholder="Input your answer here.">
+ <input type="text" id="answerer">
     <button onclick="answerit()">Submit</button>
-    <h4 id="tara"></h4>
+    <h4 id="aara"></h4>
+    <h4 id="bara"></h4>
    <script>
+        var count = 0;
     function answerit() {
+        var useranswer = document.getElementById('answerer').value;
+        // alert(typeof useranswer);
+        console.log(typeof 300000000);
+        var theanswer = useranswer.toString();
+        count++; 
+        document.getElementById('aara').innerHTML = count;
+        // document.getElementById('bara').innerHTML = useranswer;
+        if(useranswer == 300000000) document.write('You got it.');
+        else {
+        count++; 
+        var countcount = count / 2;
+        document.getElementById('aara').innerHTML = countcount;
+        if(countcount == 10) document.write('Out of chance. We are sorry that you did not get this problem.');
+        //) else {document.getElementById('aara').innerHTML = 'Incorrect. ' + ' ' + Number(count) + ' ' + 'times remains.';
+        // // document.getElementById('tara').innerHTML = count;
+        // if(count == 0) document.write('Out of chance. We are sorry that you did not get this problem.');
+    // }
+        }
+ }
 
-    for(let i = 10; i >= 0; i--) {
-        var count = i;
-        document.getElementById('tara').innerHTML = count;
-     if(count == 0) alert('Out of chance. We are sorry that you did not get this problem.')
-    }
 
 
 
 
-
-
-    }
     
     </script>
 </body>
