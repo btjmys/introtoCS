@@ -1,0 +1,31 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.js"></script>
+</head>
+<body>
+    <script>
+        let value = 0;
+let threshold = 0.5;
+function setup() {
+  setMoveThreshold(threshold);
+}
+function draw() {
+  fill(value);
+  rect(25, 25, 50, 50);
+}
+function deviceMoved() {
+  value = value + 5;
+  threshold = threshold + 0.1;
+  if (value > 255) {
+    value = 0;
+    threshold = 30;
+  }
+  setMoveThreshold(threshold);
+}
+        </script>
+</body>
+</html>
